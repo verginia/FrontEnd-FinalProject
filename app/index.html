@@ -3,69 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal CV</title>
+    <title>My Personal CVs</title>
     <link rel="stylesheet" href="../app/css/index.css">
-    <script src="../app/js/index.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="personal-photo.jpg" alt="Personal Photo">
-            <h1>Verginia Stolear</h1>
-            <p>Age: 36</p>
-            <p>Email: geenika@gmail.com</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/johndoe">LinkedIn</a>
-                <a href="https://github.com/verginia">GitHub</a>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="container">
-            <section id="about-me">
-                <h2>About Me</h2>
-                <p>I am a passionate web developer with experience in HTML, CSS, and JavaScript.</p>
-                <p>In my free time, I enjoy cycling, reading, and embroidering.</p>
-            </section>
+        <section id="about">
+            <h1>About Me</h1>
+            <img src="../app/images/StolearVerginia.jpg" alt="Personal Photo">
+            <p>Name: Verginia Stolear</p>
+            <p>Age: 36</p>
+            <p>Email: geenika@gmail.com</p>
+            <p>Brief bio about yourself...</p>
+        </section>
 
-            <section id="professional-experience">
-                <h2>Professional Experience</h2>
-                <ul>
-                    <li>Frontend Developer at ... Company (2018-2021)</li>
-                    <li>Testing at ... Corporation (2015-2018)</li>
-                </ul>
-            </section>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <ul>
+                <li>Software Engineer at ABC Corp (2015 - Present)</li>
+                <li>Web Developer at XYZ Inc (2012 - 2015)</li>
+            </ul>
+        </section>
 
-            <section id="education">
-                <h2>Education</h2>
-                <p>Bachelor's Degree in Computer Science, University of ....</p>
-                <p>Courses: Web Development Fundamentals, Advanced CSS Techniques, JavaScript for Beginners</p>
-            </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p>University of Example</p>
+            <ul>
+                <li>Bachelor of Science in Computer Science (2008 - 2012)</li>
+                <li>Courses: Data Structures, Algorithms, Web Development, etc.</li>
+            </ul>
+        </section>
 
-            <section id="hobbies">
-                <h2>Hobbies</h2>
-                <p>Hiking, Cycling, Reading, Crochet, Embroidery</p>
-            </section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>I enjoy hiking, reading, and coding in my spare time.</p>
+        </section>
 
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <form id="contact-form">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </section>
-        </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <input type="submit" value="Submit">
+            </form>
+            <p>Connect with me on social media:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/johndoe">LinkedIn</a></li>
+                <li><a href="https://twitter.com/johndoe">Twitter</a></li>
+            </ul>
+        </section>
     </main>
-
+   
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Verginia Stolear</p>
-        </div>
+        <p>Current Date and Time: <span id="datetime"></span></p>
+        <p>&copy; 2024 John Doe</p>
     </footer>
 
-    <script src="script.js"></script>
+    <button id="scrollToTopBtn">↑</button>
+
+    <script src="../app/js/index.js"></script>
 </body>
 </html>
