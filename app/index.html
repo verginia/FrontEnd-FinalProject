@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal CVs</title>
+    <title>Personal Landing Page</title>
     <link rel="stylesheet" href="../app/css/index.css">
+    <script defer src="../app/js/index.js"></script>
 </head>
 <body>
     <header>
@@ -14,65 +15,101 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications/Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <input type="text" placeholder="Search...">
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h1>About Me</h1>
-            <img src="../app/images/StolearVerginia.jpg" alt="Personal Photo">
-            <p>Name: Verginia Stolear</p>
-            <p>Age: 36</p>
-            <p>Email: geenika@gmail.com</p>
-            <p>Brief bio about yourself...</p>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="photo">
+                    <img src="../app/images/StolearVerginia.jpg" alt="Personal Photo">
+                </div>
+                <div class="personal-info">
+                    <h1>Verginia Stolear</h1>
+                    <p>Date of birth: 06/06/1988</p>
+                    <p>Email: geenika@gmail.com</p>
+                    <span>Bio: Verginia has over 7 years of experience in software testing. A forward-thinking capable and
+                        committed test engineer with a proven ability to meet agreed deadlines, co-ordinate work, and work
+                        to define testing methodologies within a structured environment. Focused on any task at hand and
+                        able to utilize existing test knowledge and experiences to develop practical solutions and
+                        alternatives to the testing process. She has a rational and organised approach toward her work. 
+                        Her main strengths are open communication, team collaboration, perseverance and strong attitude toward 
+                        work and team goals. She can integrate quickly into any team and identify all information required to 
+                        complete the tasks. Open-minded, proactive and an advocate of continuous improvement, always looks for 
+                        new challenges or opportunities to learn and acquire new skills.
+                        Strong team-player as well as reliable colleague.
+                    </span>
+                </div>
+            </div>
         </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <ul>
-                <li>Software Engineer at ABC Corp (2015 - Present)</li>
-                <li>Web Developer at XYZ Inc (2012 - 2015)</li>
-            </ul>
+        <hr>
+
+        <section id="experience" class="section" style="background-color: #f9f9f9;">
+            <h2>Experience</h2>
+            <p>Details about your work experience.</p>
         </section>
 
-        <section id="education">
+        <hr>
+
+        <section id="education" class="section" style="background-color: #eef3f8;">
             <h2>Education</h2>
-            <p>University of Example</p>
-            <ul>
-                <li>Bachelor of Science in Computer Science (2008 - 2012)</li>
-                <li>Courses: Data Structures, Algorithms, Web Development, etc.</li>
-            </ul>
+            <p>Details about your degree and courses.</p>
         </section>
 
-        <section id="hobbies">
+        <hr>
+
+        <section id="hobbies" class="section" style="background-color: #f9f9f9;">
             <h2>Hobbies</h2>
-            <p>I enjoy hiking, reading, and coding in my spare time.</p>
+            <p>Details about your hobbies.</p>
         </section>
 
-        <section id="contact">
+        <hr>
+
+        <section id="skills" class="section" style="background-color: #eef3f8;">
+            <h2>Skills</h2>
+            <p>Details about your skills.</p>
+        </section>
+
+        <hr>
+
+        <section id="certifications" class="section" style="background-color: #f9f9f9;">
+            <h2>Certifications/Courses</h2>
+            <p>Details about your certifications and courses.</p>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="section" style="background-color: #eef3f8;">
             <h2>Contact</h2>
-            <form>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <input type="submit" value="Submit">
-            </form>
-            <p>Connect with me on social media:</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/johndoe">LinkedIn</a></li>
-                <li><a href="https://twitter.com/johndoe">Twitter</a></li>
-            </ul>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Phone: +373 69437339</p>
+                    <p>Email: geenika@gmail.com</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://telegram.org" target="_blank"><img src="telegram-icon.png" alt="Telegram"></a>
+                    <a href="https://whatsapp.com" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="https://skype.com" target="_blank"><img src="skype-icon.png" alt="Skype"></a>
+                    <a href="https://viber.com" target="_blank"><img src="viber-icon.png" alt="Viber"></a>
+                    <a href="https://github.com/verginia" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+                </div>
+            </div>
         </section>
     </main>
-   
+
     <footer>
-        <p>Current Date and Time: <span id="datetime"></span></p>
-        <p>&copy; 2024 John Doe</p>
+        <p>&copy; Verginia Stolear</p>
+        <div id="date-time" onclick="showDateTime()"></div>
     </footer>
 
-    <button id="scrollToTopBtn">↑</button>
-
-    <script src="../app/js/index.js"></script>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
 </body>
 </html>
