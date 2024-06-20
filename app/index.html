@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Landing Page</title>
+    <title>Personal CV Landing Page</title>
     <link rel="stylesheet" href="../app/css/index.css">
-    <script defer src="../app/js/index.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="menu">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
@@ -19,22 +18,36 @@
                 <li><a href="#certifications">Certifications/Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <input type="text" placeholder="Search...">
+            <div class="controls">
+                <button id="search-button">Search</button>
+                <select id="language-select">
+                    <option value="en">EN</option>
+                    <option value="ro">RO</option>
+                </select>
+            </div>
+            <dialog id="search-dialog">
+                <form method="dialog">
+                    <span class="close-button">&times;</span>
+                    <h2>Search Modal Dialog</h2>
+                    <input type="text" id="search-input" placeholder="Type your search...">
+                    <button id="submit-search">Search</button>
+                </form>
+            </dialog>
         </nav>
     </header>
 
     <main>
         <section id="about" class="section">
             <h2>About Me</h2>
-            <div class="about-container">
-                <div class="photo">
+            <div class="container">
+                <div class="column photo">
                     <img src="../app/images/StolearVerginia.jpg" alt="Personal Photo">
                 </div>
-                <div class="personal-info">
-                    <h1>Verginia Stolear</h1>
-                    <p>Date of birth: 06/06/1988</p>
-                    <p>Email: geenika@gmail.com</p>
-                    <span>Bio: Verginia has over 7 years of experience in software testing. A forward-thinking capable and
+                <div class="column info">
+                    <h2>Verginia Stolear</h2>
+                    <p><b>Date of birth:</b> 06/06/1988</p>
+                    <p><b>Email:</b> geenika@gmail.com</p>
+                    <span><b>Bio:</b> Verginia has over 7 years of experience in software testing. A forward-thinking capable and
                         committed test engineer with a proven ability to meet agreed deadlines, co-ordinate work, and work
                         to define testing methodologies within a structured environment. Focused on any task at hand and
                         able to utilize existing test knowledge and experiences to develop practical solutions and
@@ -49,67 +62,54 @@
             </div>
         </section>
 
-        <hr>
-
-        <section id="experience" class="section" style="background-color: #f9f9f9;">
-            <h2>Experience</h2>
-            <p>Details about your work experience.</p>
+        <section id="experience" class="section">
+            <h2>Work Experience</h2>
+            <p>Details about your work experience...</p>
         </section>
 
-        <hr>
-
-        <section id="education" class="section" style="background-color: #eef3f8;">
+        <section id="education" class="section">
             <h2>Education</h2>
-            <p>Details about your degree and courses.</p>
+            <p>Details about your education...</p>
         </section>
 
-        <hr>
-
-        <section id="hobbies" class="section" style="background-color: #f9f9f9;">
+        <section id="hobbies" class="section">
             <h2>Hobbies</h2>
-            <p>Details about your hobbies.</p>
+            <p>Details about your hobbies...</p>
         </section>
 
-        <hr>
-
-        <section id="skills" class="section" style="background-color: #eef3f8;">
+        <section id="skills" class="section">
             <h2>Skills</h2>
-            <p>Details about your skills.</p>
+            <p>Details about your skills...</p>
         </section>
 
-        <hr>
-
-        <section id="certifications" class="section" style="background-color: #f9f9f9;">
+        <section id="certifications" class="section">
             <h2>Certifications/Courses</h2>
-            <p>Details about your certifications and courses.</p>
+            <p>Details about your certifications and courses...</p>
         </section>
 
-        <hr>
-
-        <section id="contact" class="section" style="background-color: #eef3f8;">
+        <section id="contact" class="section">
             <h2>Contact</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <p>Phone: +373 69437339</p>
+            <div class="container">
+                <div class="column contact-info">
+                    <p>Phone: +373 69 437 339</p>
                     <p>Email: geenika@gmail.com</p>
                 </div>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="https://telegram.org" target="_blank"><img src="telegram-icon.png" alt="Telegram"></a>
-                    <a href="https://whatsapp.com" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
-                    <a href="https://skype.com" target="_blank"><img src="skype-icon.png" alt="Skype"></a>
-                    <a href="https://viber.com" target="_blank"><img src="viber-icon.png" alt="Viber"></a>
-                    <a href="https://github.com/verginia" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+                <div class="column social-media">
+                    <p>Connect with me:</p>
+                    <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/verginia"><img src="github-icon.png" alt="GitHub"></a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Verginia Stolear</p>
-        <div id="date-time" onclick="showDateTime()"></div>
+        <p>&copy; 2024 Verginia Stolear</p>
+        <div id="date-time" onclick="showCalendar()"></div>
     </footer>
 
-    <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
+    <button id="scrollToTopBtn">↑</button>
+
+    <script src="../app/js/index.js"></script>
 </body>
 </html>
