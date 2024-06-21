@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal CV Landing Page</title>
-    <link rel="stylesheet" href="../app/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/index.css">
 </head>
 <body>
     <header>
         <nav>
-            <ul class="menu">
+            <ul class="navigation">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
@@ -87,20 +87,32 @@
             <p>Details about your certifications and courses...</p>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="container">
-                <div class="column contact-info">
-                    <p>Phone: +373 69 437 339</p>
-                    <p>Email: geenika@gmail.com</p>
-                </div>
-                <div class="column social-media">
-                    <p>Connect with me:</p>
-                    <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                    <a href="https://github.com/verginia"><img src="github-icon.png" alt="GitHub"></a>
+        <div id="contact" class="contact-section">
+            <div class="contact-column">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <p><strong>Phone:</strong> +373 69 437 339</p>
+                        <p><strong>Email:</strong> geenika@gmail.com</p>
+                    </div>
+                    <div class="contact-actions">
+                        <details id="info">
+                            <summary>Details</summary>
+                            <a href="tel:+373 69 437 339">Make a call</a>
+                        </details>
+                        <details id="info">
+                            <summary>Details</summary>
+                            <a href="mailto:geenika@gmail.com">Send an email</a>
+                        </details>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="connect-column">
+                <h3>Connect with Me</h3>
+                <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/"><img src="../app/images/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/verginia"><img src="../app/images/github-logo.png" alt="GitHub"></a>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -108,7 +120,7 @@
         <div id="date-time" onclick="showCalendar()"></div>
     </footer>
 
-    <button id="scrollToTopBtn">↑</button>
+    <button id="scrollToTopBtn">🡱</button>
 
     <script src="../app/js/index.js"></script>
 </body>
