@@ -8,39 +8,42 @@ body {
 header {
     background-color: #418f41;
     color: white;
-    padding: 10px 0;
 }
-
-nav {
+nav{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
-    padding: 0 80px 0 50px;
+    
 }
-
-.menu {
-    list-style: none;
+.navigation {
     display: flex;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    list-style: none;
+    margin-right: 10px; 
 }
 
-.menu li {
-    margin-right: 20px;
-    padding: 15px;
-}
-
-.menu li a {
-    color: white;
+.navigation a {
     text-decoration: none;
-}
-.menu li a:hover, .controls button:hover, .controls select:hover{
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+.navigation a:hover {
+    background: #1565C0;
+  }
+
+
+.navigation li a:hover, .controls button:hover, .controls select:hover{
     background-color: #2996d4;
     color: black;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(8, 5, 5, 0.87);
-    padding: 10px 5px;
+    padding: 1em;
+    
 }
 
 dialog {
@@ -69,11 +72,15 @@ dialog {
 
 .controls {
     display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
     align-items: center;
+    
 }
 
 .controls button, .controls select {
     margin-left: 10px;
+    padding: 1em;
 }
 
 .section {
@@ -112,8 +119,64 @@ span{
 b{
     color: #0914b3;
 }
-.column.social-media{
-    padding-right: 80px;
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-column, .connect-column {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details, .contact-actions {
+    flex: 1;
+    padding: 5px;
+}
+
+.contact-actions details {
+    margin-top: 5px;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.3em 0.3em 0;
+    width: 130px;
+  }
+  
+  summary {
+    font-weight: bold;
+    margin: -0.2em -0.2em 0;
+    padding: 0.2em;
+  }
+  
+  details[open] {
+    padding: 0.3em;
+  }
+  
+  details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.2em;
+  }
+
+.connect-column{
+    padding: 10px;
+}
+.connect-column a img {
+    flex: 1;
+    height: auto;
+    border-radius: 5%;
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
 }
 footer {
     display: flex;
@@ -134,7 +197,6 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
 }
 
 #date-time {
@@ -142,10 +204,11 @@ footer {
     padding-right: 80px;
 }
 
-@media (max-width: 768px) {
-    .menu, .controls {
+@media (max-width: 800px) {
+    .navigation, .controls {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: space-around;
     }
 
     .controls select {
@@ -153,4 +216,35 @@ footer {
         padding: 10px;
         margin-top: 10px;
     }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-column, .connect-column {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
+
+@media all and (max-width: 600px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    .navigation a { 
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    .navigation li:last-of-type a {
+      border-bottom: none;
+    }
+  }

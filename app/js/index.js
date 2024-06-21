@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add your language change logic here
     }
 
+    document.getElementById('info').addEventListener('toggle', function() {
+        alert('The details element was toggled.');
+      });
+
     // Show scroll to top button
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 200) {
@@ -54,3 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(`Today's date is: ${new Date().toLocaleDateString()}`);
     };
 });
+
+// add type to button in html file
+// fix the menu
