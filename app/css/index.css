@@ -119,6 +119,48 @@ span{
 b{
     color: #0914b3;
 }
+
+.work {
+    width: 620px;
+    padding: 0.3em;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 4px black;
+}
+h3{
+    font-family: Arial, sans-serif;
+    color: blue;
+}
+
+#education ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 20px;
+}
+#education ul li {
+    position: relative;
+    padding-left: 30px; /* Adjust to make space for the emoji */
+    margin-bottom: 5px;
+}
+#education ul li::before {
+    content: '👩‍🎓'; /* Woman student emoji */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#hobbies ul {
+    list-style:decimal; 
+    font-style: oblique;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+#skills ul {
+    list-style: circle;
+    padding-left: 10px;
+    margin-left: 20px;
+}
 .contact-section {
     display: flex;
     justify-content: space-around;
