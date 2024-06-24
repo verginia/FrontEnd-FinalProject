@@ -124,37 +124,43 @@
         <section id="skills" class="section">
             <h2>Skills</h2>
             <p>Details about my skills:</p>
-            <h3>Technical Skills:</h3>
-            <ul>
-                <li>HTML & CSS.</li>
-                <li>JavaScript.</li>
-                <li>Java.</li>
-                <li>Groovy.</li>
-                <li>SQL.</li>
-                <li>MySQL.</li>
-            </ul>
-            <h3>Soft Skills:</h3>
-            <ul>
-                <li>Responsibility.</li>
-                <li>Attention to Detail.</li>
-                <li>Adaptability.</li>
-                <li>Problem-solving.</li>
-                <li>Emotional intelligence.</li>
-                <li>Honesty.</li>
-                <li>Fairness.</li>
-                <li>Teamwork.</li>
-                <li>Leadership.</li>
-                <li>Time Management.</li>
-                <li>Communication.</li>
-                <li>Active listening.</li>
-                <li>Creativity.</li>
-                <li>Confidence.</li>
-                <li>Willingness to learn.</li>
-                <li>Critical thinking.</li>
-                <li>Open-mindedness.</li>
-                <li>Work Ethic.</li>
-            </ul>
+            <button class="button" onclick="showPopup('technicalSkillsPopup', this)">Technical Skills</button>
+            <button class="button" onclick="showPopup('softSkillsPopup', this)">Soft Skills</button>
         </section>
+    
+        <div id="technicalSkillsPopup" class="popup">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Groovy</li>
+                <li>SQL</li>
+                <li>MySQL</li>
+            </ul>
+            <button class="button" onclick="closePopup('technicalSkillsPopup')">Close</button>
+        </div>
+    
+        <div id="softSkillsPopup" class="popup">
+            <h3>Soft Skills</h3>
+            <ul id="softSkillsList">
+                <li>Responsibility</li>
+                <li>Attention to Detail</li>
+                <li>Adaptability</li>
+                <li>Problem-solving</li>
+                <li>Emotional intelligence</li>
+                <li>Honesty</li>
+                <li>Fairness</li>
+                <li>Teamwork</li>
+                <li>Leadership</li>
+                <!-- Additional skills will be added dynamically -->
+            </ul>
+            <button id="toggleSoftSkillsButton" class="button" onclick="toggleSoftSkills()">Show More</button>
+            <button class="button" onclick="closePopup('softSkillsPopup')">Close</button>
+        </div>
+    
+        <div id="overlay" class="overlay" onclick="closeAllPopups()"></div>
+    
 
         <section id="certification" class="section">
             <h2>Certifications/Courses</h2>
