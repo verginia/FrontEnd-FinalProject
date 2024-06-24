@@ -54,10 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateDateTime, 1000);
 
     // Show calendar on date-time click
-    window.showCalendar = function() {
-        alert(`Today's date is: ${new Date().toLocaleDateString()}`);
-    };
+    // window.showCalendar = function() {
+    //     alert(`Today's date is: ${new Date().toLocaleDateString()}`);
+    // };
 });
+
+
+
 
 // add type to button in html file
 // fix the menu
