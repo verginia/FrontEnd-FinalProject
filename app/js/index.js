@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show scroll to top button
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 200) {
+        if (window.pageYOffset > 75) {
             scrollToTopBtn.style.display = 'block';
         } else {
             scrollToTopBtn.style.display = 'none';
@@ -118,6 +118,3 @@ function toggleSoftSkills() {
 
 
 
-
-// add type to button in html file
-// fix the menu
