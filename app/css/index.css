@@ -47,13 +47,18 @@ nav{
 }
 
 dialog {
-    border: none;
+    border: solid 1px #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(73, 66, 66, 0.87);
-    width: 80%;
+    width: 50%;
+    height: 140px;
     max-width: 600px;
     padding: 10px;
     text-align: center;
+}
+
+dialog::backdrop {
+    background: rgba(82, 79, 79, 0.959);
 }
 
 .close-button {
@@ -139,11 +144,11 @@ h3{
 }
 #education ul li {
     position: relative;
-    padding-left: 30px; /* Adjust to make space for the emoji */
+    padding-left: 30px; 
     margin-bottom: 5px;
 }
 #education ul li::before {
-    content: '👩‍🎓'; /* Woman student emoji */
+    content: '👩‍🎓'; 
     position: absolute;
     left: 0;
     top: 0;
@@ -324,10 +329,11 @@ footer {
     }
 }
 
-@media all and (max-width: 600px) {
+@media (max-width: 600px) {
     .navigation {
-      flex-flow: column wrap;
-      padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
     }
     .navigation a { 
       text-align: center; 
@@ -337,5 +343,26 @@ footer {
     }
     .navigation li:last-of-type a {
       border-bottom: none;
+    }
+    .column.photo img {
+        width: 200px; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    .column.info {
+        width: 100%; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    span {
+        font-size: 16px; 
+        line-height: 22px; 
+    }
+
+    .work {
+        width: 100%; 
+        
     }
   }
